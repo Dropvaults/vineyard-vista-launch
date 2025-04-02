@@ -37,10 +37,10 @@ const NavBar: React.FC = () => {
   return (
     <nav 
       className={cn(
-        "fixed top-0 left-0 w-full z-50 transition-all duration-300 sticky",
+        "fixed top-0 left-0 w-full z-50 transition-all duration-300",
         isScrolled 
           ? "bg-canto-terracotta shadow-md py-3" 
-          : "bg-transparent py-5"
+          : "bg-canto-terracotta py-5"
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
