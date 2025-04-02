@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import NavBar from '@/components/NavBar';
 import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
+import InstagramFeed from '@/components/InstagramFeed';
 import { motion } from 'framer-motion';
 import { Badge } from "@/components/ui/badge";
 
@@ -111,6 +112,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+      
+      {/* Instagram Feed Section */}
+      <InstagramFeed />
       
       <Footer />
     </div>
