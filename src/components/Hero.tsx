@@ -30,11 +30,11 @@ const Hero: React.FC = () => {
               <div className="w-20 h-0.5 bg-canto-gold my-8"></div>
               
               <p className="max-w-md text-lg md:text-xl font-light italic">
-                Experience the essence of Spain with Canto de Casa.
+                BRINGING A TASTE OF OUR CASA STRAIGHT TO YOUR TABLE
               </p>
               
               <p className="max-w-md mt-2 mb-8">
-                A distinguished Tempranillo crafted from our organic vineyards.
+                Experience the essence of Spain with Canto de Casa, a distinguished Tempranillo crafted from our organic vineyards.
               </p>
               
               <a 

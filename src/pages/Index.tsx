@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react';
 import NavBar from '@/components/NavBar';
 import Hero from '@/components/Hero';
-import WineFeature from '@/components/WineFeature';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 
@@ -33,10 +32,7 @@ const Index = () => {
               <div className="w-20 h-0.5 bg-canto-gold mx-auto mb-8"></div>
               
               <p className="text-lg mb-8">
-                Canto de Casa, meaning "Song of Home" in Spanish, represents our 
-                family's century-old commitment to winemaking excellence. Each 
-                bottle is a harmonious expression of our estate's terroir and the 
-                passionate craftsmanship of our artisans.
+                Indulge in Canto de Casa, our classic Tempranillo from organic vineyards in Spain. Bringing a taste of our casa straight to your table.
               </p>
               
               <div className="inline-block">
@@ -51,74 +47,38 @@ const Index = () => {
         </div>
       </section>
       
-      <WineFeature />
-      
-      <section className="py-16 md:py-24 bg-canto-cream">
+      <section className="py-16 md:py-24 bg-canto-lightcream">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-3xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center"
             >
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl lg:text-5xl text-canto-black mb-12">
-                Our Collection
+              <h2 className="font-playfair font-bold text-3xl md:text-4xl lg:text-5xl text-canto-black mb-6">
+                Wine
               </h2>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  name: "Tempranillo Reserva",
-                  year: "2018",
-                  description: "Bold and complex with notes of dark fruit and oak."
-                },
-                {
-                  name: "Crianza",
-                  year: "2019",
-                  description: "Elegant and balanced with hints of vanilla and spice."
-                },
-                {
-                  name: "Rosado",
-                  year: "2021",
-                  description: "Fresh and vibrant with delicate berry aromas."
-                }
-              ].map((wine, index) => (
-                <motion.div
-                  key={wine.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+              
+              <div className="w-20 h-0.5 bg-canto-gold mx-auto mb-8"></div>
+              
+              <p className="text-lg mb-8">
+                Experience the essence of Spain with Canto de Casa, a distinguished Tempranillo crafted from our organic vineyards.
+              </p>
+              
+              <p className="text-lg mb-8">
+                This bold and versatile red wine captivates the palate, effortlessly complementing your favorite dishes and making every gathering memorable.
+              </p>
+              
+              <div className="text-center mt-6">
+                <a 
+                  href="#" 
+                  className="inline-block bg-canto-terracotta text-white px-8 py-3 hover:bg-canto-terracotta/90 transition-colors duration-300 font-medium tracking-wider text-sm"
                 >
-                  <div className="flex flex-col space-y-4">
-                    <h3 className="font-playfair font-semibold text-xl text-canto-black">
-                      {wine.name}
-                    </h3>
-                    <div className="text-canto-gold font-medium">{wine.year}</div>
-                    <p className="text-canto-black/80">{wine.description}</p>
-                    <a 
-                      href="#" 
-                      className="text-canto-terracotta hover:text-canto-terracotta/80 text-sm font-medium mt-2 inline-block"
-                    >
-                      View Wine →
-                    </a>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-            
-            <div className="text-center mt-12">
-              <a 
-                href="#" 
-                className="inline-block bg-canto-terracotta text-white px-8 py-3 hover:bg-canto-terracotta/90 transition-colors duration-300 font-medium tracking-wider text-sm"
-              >
-                EXPLORE ALL WINES
-              </a>
-            </div>
+                  DISCOVER OUR WINE
+                </a>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -133,19 +93,18 @@ const Index = () => {
               viewport={{ once: true }}
             >
               <h2 className="font-playfair font-bold text-3xl md:text-4xl lg:text-5xl mb-8">
-                Join Our Wine Club
+                Visit Our Vineyard
               </h2>
               
               <p className="text-lg mb-8">
-                Become a part of the Canto de Casa family and enjoy exclusive access to limited releases, 
-                special events, and personalized tasting experiences.
+                Experience the beauty of our Spanish vineyard firsthand. Schedule a tour to learn about our winemaking process and enjoy exclusive tastings of our signature Tempranillo.
               </p>
               
               <a 
                 href="#" 
                 className="inline-block border-2 border-white text-white px-8 py-3 hover:bg-white hover:text-canto-terracotta transition-colors duration-300 font-medium tracking-wider text-sm"
               >
-                BECOME A MEMBER
+                PLAN YOUR VISIT
               </a>
             </motion.div>
           </div>
