@@ -11,56 +11,7 @@ const HomePage: React.FC = () => {
     <div className="min-h-screen flex flex-col">
       <NavBar />
       <Hero />
-      
-      <section className="py-16 md:py-24 bg-canto-lightcream text-center" id="wine">
-        <div className="container mx-auto px-4 md:px-6">
-          <h2 className="font-mackinac font-bold text-3xl md:text-4xl lg:text-5xl mb-6">
-            The Song of Home
-          </h2>
-          
-          <div className="w-20 h-0.5 bg-canto-gold mx-auto mb-8"></div>
-          
-          <div className="max-w-3xl mx-auto mb-12">
-            <p className="text-lg">
-              Indulge in Canto de Casa, our classic Tempranillo from organic vineyards in Spain. Bringing 
-              a taste of our casa straight to your table.
-            </p>
-          </div>
-          
-          <div className="flex justify-center mb-16">
-            <img 
-              src="/lovable-uploads/81762000-f354-407f-8b4e-022ac2bdde76.png" 
-              alt="Spanish Vineyard House" 
-              className="h-48 w-auto"
-            />
-          </div>
-          
-          <h2 className="font-mackinac font-bold text-3xl md:text-4xl lg:text-5xl mb-6 mt-16">
-            Wine
-          </h2>
-          
-          <div className="w-20 h-0.5 bg-canto-gold mx-auto mb-8"></div>
-          
-          <div className="max-w-3xl mx-auto mb-12">
-            <p className="text-lg mb-6">
-              Experience the essence of Spain with Canto de Casa, a distinguished Tempranillo crafted 
-              from our organic vineyards.
-            </p>
-            <p className="text-lg">
-              This bold and versatile red wine captures the palate, effortlessly complementing your 
-              favorite dishes and making every gathering memorable.
-            </p>
-          </div>
-          
-          <div className="flex justify-center mb-16">
-            <img 
-              src="/lovable-uploads/a0a97603-8004-4a02-aedc-b9ca7b7fd28b.png" 
-              alt="Canto de Casa Wine Bottle" 
-              className="h-80 w-auto"
-            />
-          </div>
-        </div>
-      </section>
+      <WineFeature />
       
       <section id="store" className="py-16 md:py-24 bg-canto-cream">
         <div className="container mx-auto px-4 md:px-6">
