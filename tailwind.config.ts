@@ -120,7 +120,8 @@ export default {
 			},
 			fontFamily: {
 				'playfair': ['Playfair Display', 'serif'],
-				'lora': ['Lora', 'serif']
+				'lora': ['Lora', 'serif'],
+				'mackinac': ['mackinac-pro', 'serif']
 			}
 		}
 	},

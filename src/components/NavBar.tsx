@@ -58,7 +58,7 @@ const NavBar: React.FC = () => {
             <button 
               key={item.id} 
               onClick={() => scrollToSection(item.id)}
-              className="text-canto-cream text-sm tracking-wider menu-link flex items-center"
+              className="text-canto-cream text-sm tracking-wider menu-link flex items-center font-mackinac"
             >
               {item.label}
             </button>
@@ -82,7 +82,7 @@ const NavBar: React.FC = () => {
               <button 
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-canto-cream text-sm tracking-wider pl-2 py-2 border-b border-canto-cream/10 text-left flex items-center"
+                className="text-canto-cream text-sm tracking-wider pl-2 py-2 border-b border-canto-cream/10 text-left flex items-center font-mackinac"
               >
                 {item.label}
               </button>
