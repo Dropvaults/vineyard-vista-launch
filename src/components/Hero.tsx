@@ -23,9 +23,11 @@ const Hero: React.FC = () => {
                 FROM OUR CASA TO YOURS
               </div>
               
-              <h1 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl text-canto-black leading-tight">
-                CANTO <span className="gold-underline">DE</span> CASA
-              </h1>
+              <img 
+                src="/lovable-uploads/729280d8-1e37-4876-90b4-a3b543e50a03.png" 
+                alt="Canto de Casa Logo"
+                className="max-w-[300px] mb-8"
+              />
               
               <div className="w-20 h-0.5 bg-canto-gold my-8"></div>
               

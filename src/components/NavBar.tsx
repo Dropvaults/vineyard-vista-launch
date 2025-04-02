@@ -28,8 +28,12 @@ const NavBar: React.FC = () => {
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        <div className="text-canto-cream text-2xl font-playfair font-bold">
-          CANTO DE CASA
+        <div className="text-canto-cream h-10">
+          <img 
+            src="/lovable-uploads/729280d8-1e37-4876-90b4-a3b543e50a03.png" 
+            alt="Canto de Casa Logo"
+            className="h-full"
+          />
         </div>
         
         {/* Desktop Menu */}
