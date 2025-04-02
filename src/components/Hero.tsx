@@ -40,14 +40,14 @@ const Hero: React.FC = () => {
               </p>
               
               <a 
-                href="#" 
+                href="#wine" 
                 className={cn(
                   "inline-block bg-canto-terracotta text-white px-8 py-3",
                   "hover:bg-canto-terracotta/90 transition-colors duration-300",
                   "font-medium tracking-wider text-sm"
                 )}
               >
-                VIEW DETAILS
+                DISCOVER OUR WINE
               </a>
             </motion.div>
           </div>

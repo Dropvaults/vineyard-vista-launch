@@ -4,6 +4,7 @@ import NavBar from '@/components/NavBar';
 import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
+import { Badge } from "@/components/ui/badge";
 
 const Index = () => {
   useEffect(() => {
@@ -14,9 +15,11 @@ const Index = () => {
     <div className="min-h-screen bg-canto-cream">
       <NavBar />
       
-      <Hero />
+      <section id="home">
+        <Hero />
+      </section>
       
-      <section className="py-16 md:py-24">
+      <section id="wine" className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -70,20 +73,19 @@ const Index = () => {
                 This bold and versatile red wine captivates the palate, effortlessly complementing your favorite dishes and making every gathering memorable.
               </p>
               
-              <div className="text-center mt-6">
-                <a 
-                  href="#" 
-                  className="inline-block bg-canto-terracotta text-white px-8 py-3 hover:bg-canto-terracotta/90 transition-colors duration-300 font-medium tracking-wider text-sm"
-                >
-                  DISCOVER OUR WINE
-                </a>
+              <div className="flex justify-center mt-8">
+                <img 
+                  src="/lovable-uploads/a0a97603-8004-4a02-aedc-b9ca7b7fd28b.png"
+                  alt="Canto de Casa Wine Bottle" 
+                  className="h-[400px] object-contain"
+                />
               </div>
             </motion.div>
           </div>
         </div>
       </section>
       
-      <section className="py-16 md:py-24 bg-canto-terracotta text-white">
+      <section id="store" className="py-16 md:py-24 bg-canto-cream">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -92,20 +94,19 @@ const Index = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl lg:text-5xl mb-8">
-                Visit Our Vineyard
+              <h2 className="font-playfair font-bold text-3xl md:text-4xl lg:text-5xl mb-6">
+                Store Locator
               </h2>
               
-              <p className="text-lg mb-8">
-                Experience the beauty of our Spanish vineyard firsthand. Schedule a tour to learn about our winemaking process and enjoy exclusive tastings of our signature Tempranillo.
-              </p>
+              <div className="w-20 h-0.5 bg-canto-gold mx-auto mb-8"></div>
               
-              <a 
-                href="#" 
-                className="inline-block border-2 border-white text-white px-8 py-3 hover:bg-white hover:text-canto-terracotta transition-colors duration-300 font-medium tracking-wider text-sm"
-              >
-                PLAN YOUR VISIT
-              </a>
+              <div className="p-8 bg-canto-lightcream rounded-md shadow-sm">
+                <Badge className="bg-canto-terracotta text-white border-none mb-4 mx-auto">COMING SOON</Badge>
+                <p className="text-lg">
+                  We're working on making Canto de Casa available at select retailers near you. 
+                  Check back soon to find where you can purchase our exceptional Tempranillo.
+                </p>
+              </div>
             </motion.div>
           </div>
         </div>

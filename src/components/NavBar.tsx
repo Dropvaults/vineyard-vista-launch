@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Instagram } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Badge } from "@/components/ui/badge";
 
 const NavBar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,6 +18,25 @@ const NavBar: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setMobileMenuOpen(false);
+  };
+
+  const menuItems = [
+    { id: 'home', label: 'HOME' },
+    { id: 'wine', label: 'WINE' },
+    { 
+      id: 'store', 
+      label: 'STORE LOCATOR',
+      badge: true
+    },
+    { id: 'contact', label: 'CONTACT US' }
+  ];
 
   return (
     <nav 
@@ -38,19 +58,20 @@ const NavBar: React.FC = () => {
         
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          {['HOME', 'WINE', 'SHOP', 'CONTACT US'].map((item) => (
-            <a 
-              key={item} 
-              href="#" 
-              className="text-canto-cream text-sm tracking-wider menu-link"
+          {menuItems.map((item) => (
+            <button 
+              key={item.id} 
+              onClick={() => scrollToSection(item.id)}
+              className="text-canto-cream text-sm tracking-wider menu-link flex items-center"
             >
-              {item}
-            </a>
+              {item.label}
+              {item.badge && (
+                <Badge variant="outline" className="ml-2 border-canto-gold text-canto-gold">
+                  COMING SOON
+                </Badge>
+              )}
+            </button>
           ))}
-          <a href="#" className="text-canto-cream flex items-center space-x-2">
-            <span className="text-sm tracking-wider menu-link">FOLLOW</span>
-            <Instagram size={18} />
-          </a>
         </div>
         
         {/* Mobile Menu Button */}
@@ -66,24 +87,20 @@ const NavBar: React.FC = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-canto-terracotta absolute w-full py-4 shadow-md">
           <div className="container mx-auto px-4 flex flex-col space-y-4">
-            {['HOME', 'WINE', 'SHOP', 'CONTACT US'].map((item) => (
-              <a 
-                key={item} 
-                href="#" 
-                className="text-canto-cream text-sm tracking-wider pl-2 py-2 border-b border-canto-cream/10"
-                onClick={() => setMobileMenuOpen(false)}
+            {menuItems.map((item) => (
+              <button 
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="text-canto-cream text-sm tracking-wider pl-2 py-2 border-b border-canto-cream/10 text-left flex items-center"
               >
-                {item}
-              </a>
+                {item.label}
+                {item.badge && (
+                  <Badge variant="outline" className="ml-2 border-canto-gold text-canto-gold text-xs">
+                    COMING SOON
+                  </Badge>
+                )}
+              </button>
             ))}
-            <a 
-              href="#" 
-              className="text-canto-cream flex items-center space-x-2 pl-2 py-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span className="text-sm tracking-wider">FOLLOW</span>
-              <Instagram size={18} />
-            </a>
           </div>
         </div>
       )}
