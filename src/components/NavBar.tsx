@@ -30,11 +30,7 @@ const NavBar: React.FC = () => {
   const menuItems = [
     { id: 'home', label: 'HOME' },
     { id: 'wine', label: 'WINE' },
-    { 
-      id: 'store', 
-      label: 'STORE LOCATOR',
-      badge: true
-    },
+    { id: 'store', label: 'STORE LOCATOR' },
     { id: 'contact', label: 'CONTACT US' }
   ];
 
@@ -65,11 +61,6 @@ const NavBar: React.FC = () => {
               className="text-canto-cream text-sm tracking-wider menu-link flex items-center"
             >
               {item.label}
-              {item.badge && (
-                <Badge variant="outline" className="ml-2 border-canto-gold text-canto-gold">
-                  COMING SOON
-                </Badge>
-              )}
             </button>
           ))}
         </div>
@@ -94,11 +85,6 @@ const NavBar: React.FC = () => {
                 className="text-canto-cream text-sm tracking-wider pl-2 py-2 border-b border-canto-cream/10 text-left flex items-center"
               >
                 {item.label}
-                {item.badge && (
-                  <Badge variant="outline" className="ml-2 border-canto-gold text-canto-gold text-xs">
-                    COMING SOON
-                  </Badge>
-                )}
               </button>
             ))}
           </div>
